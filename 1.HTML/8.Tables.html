@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tables</title>
+        <style>
+            .theader
+            {
+                font-weight: bold;
+                background-color: blue;
+            }
+
+            table,td
+            {
+                background-color: lightblue;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th
+            {
+                border: 1px solid black;
+                font-size: 20px;
+                color: white;
+            }
+
+            caption
+            {
+                font: 24px bold black;
+            }
+
+            td
+            {
+                padding: 10px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <table class="table">
+            <caption>Schedule Table</caption>
+            <tr class="theader">
+                <td rowspan="6">Hours</td>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fry</th>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Art</td>
+                <td>English Lit</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Art</td>
+                <td>English Lit</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center;">Lunch Break</td>
+            </tr>
+               <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Art</td>
+                <td>English Lit</td>
+                <td>Sports</td>
+            </tr>   
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Art</td>
+                <td>English Lit</td>
+                <td>Sports</td>
+            </tr>
+        </table>
+    </body>
+</html>

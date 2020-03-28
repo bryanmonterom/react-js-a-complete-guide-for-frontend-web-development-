@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head title="Invoice">
+        <style>
+            table,td
+            {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            td
+            {
+                padding: 20px;
+            }
+
+            .heading
+            {
+                font-weight: bold;
+                font-size: 22px;
+                background-color: lightblue;
+            }
+            .details
+            {
+                line-height: 0.1;
+            }
+        </style>
+    </head>
+    <body style="background-color: whitesmoke;">
+        <table style="background-color: white; margin: auto;">
+            <tr>
+                <td class="heading" colspan="3">Invoice #12345ABC</td>
+                <td class="heading" >28 MAR 2020</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="details">
+                        <p style="font-weight: bold;">Pay To:</p>
+                        <p>The Tech Park</p>
+                        <p>123 Willow Street</p>
+                        <p>Boulevard, LA -5678982</p>
+                    </div>
+                </td>
+                <td colspan="2">
+                    <div class="details">
+                        <p style="font-weight: bold;">Customer:</p>
+                        <p>John Doe</p>
+                        <p>Dummy Apartments</p>
+                        <p>276 Main Street</p>
+                        <p>Bouleverad, LA - 2121A</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="heading" >Name/Description</td>
+                <td class="heading" >Qty</td>
+                <td class="heading" >MRP</td>
+                <td class="heading" >Amount</td>
+            </tr>
+            <tr>
+                <td>Biryani</td>
+                <td>3</td>
+                <td>400</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>Chocolate Shake</td>
+                <td>3</td>
+                <td>200</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="heading" >Sub Total</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="heading" >Tax</td>
+                <td>10%</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td class="heading"  colspan="3">Grand Total</td>
+                <td>$1620</td>
+            </tr>
+        </table>
+    </body>
+</html>
