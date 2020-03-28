@@ -1,0 +1,38 @@
+.topBar
+{
+    background-color:#779ecb;
+    padding: 24px;
+    margin: 0px;
+}
+
+li>a
+{
+    font-size: 22px;
+}
+
+img
+{
+    width: 400px;
+    height: 400px;
+}
+div>p
+ {
+     text-align: center;
+ }
+.container
+{
+    margin: 0;
+    background-color: lightskyblue;
+}
+.barItem
+{
+    font-size:24px;
+    padding: 8px;
+    font-weight: 800;
+}
+
+.list-heading
+{
+    padding-left: 24px;
+    font-size: 20px;
+}
