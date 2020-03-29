@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Create a Signup Form
+        </title>
+        <style>
+            .form-signup
+            {
+                background-color: whitesmoke;
+                border: 1px solid black;
+                margin:auto;
+                width: 600px;
+                height: 600px;
+                border-radius: 2px;
+                padding: 24px;
+
+            }
+
+            .input-label{
+                font: bold 14px ;
+                margin-bottom: 4px;
+                margin-top: 12px;
+            }
+
+            .input-control
+            {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightblue;">
+        <form class="form-signup">
+            <h1>Signup</h1>
+            <div>
+                <label class="input-label">Full Name</label><br>
+                <input class="input-control" required  type="text" name="FullName"/>
+            </div>
+            <div>
+                <label class="input-label">Email</label><br>
+                <input class="input-control"type="email" required name="Email"/>
+            </div>
+            <div>
+                <label class="input-label">Date</label><br>
+                <input type="date" name="date"a>
+            </div>
+            <div>
+                <label class="input-label">Password</label><br>
+                <input class="input-control" type="text" name="Password"/>
+            </div>
+            <div>
+                <label class="input-label" >Confirm Password</label><br>
+                <input class="input-control" type="text" name="ConfirmPassword"/>
+            </div>
+            <div>
+                <label class="input-label">Gender</label><br>
+                <input type="radio" name="Male" value="male">Male</input>
+                <input type="radio" name="Female" value="female">Female</input>
+            </div>
+            <div>
+                <label class="input-label">Security Question:</label></br>
+                <select class="input-control" name="SecurityQuestion" id="">
+                    <option value="1">Question 1</option>
+                    <option value="2">Question 2</option>
+                    <option value="3">Question 1</option>
+                </select>
+            </br>
+                <textarea class="input-control" rows="6"></textarea>
+            </br>
+                <input type="radio"  name="terms" value="yes">I agree with terms and contidions
+            </div>
+            <input class="input-control" type="submit" value="Register">
+            <input class="input-control" type="reset" value="Clean">
+            <input class="input-control" type="file" value="Clean">
+            
+        </form>
+    </body>
+</html>
