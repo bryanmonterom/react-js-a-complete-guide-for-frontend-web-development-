@@ -8,7 +8,7 @@ const ProductPreview = (props) =>
   const currentMinute = new Date().getMinutes() > 9 ? new Date().getMinutes() : '0' + new Date().getMinutes();
   const HeartBeatSection =  <div className = {classes.HeartBeatSection}> 
   <i className="fa fa-heartbeat"></i>
-  <p>78</p> 
+  <p className={classes.Paragraph}>78</p> 
   </div>;
 
   const timeSection =  <div className = {classes.TimeSection}>
