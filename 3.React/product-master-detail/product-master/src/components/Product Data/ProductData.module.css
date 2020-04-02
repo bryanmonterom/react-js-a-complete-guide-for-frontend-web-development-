@@ -1,0 +1,102 @@
+.ProductData
+{
+  width: 100%;
+}
+
+.ProductTitle
+{
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.Description
+{
+  font-size: 20px;
+  color:black;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: justify;
+
+}
+
+.ProductImage
+{
+  width: 100%;
+  max-width: 80px;
+  border-radius: 8px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  cursor: pointer;
+
+}
+
+.ProductImage:hover
+{
+  width: 100%;
+  max-width: 80px;
+  border: 2px solid teal;
+  border-radius: 8px;
+  opacity: 0.8;
+  cursor: pointer;
+
+}
+
+.SectionHeading
+{
+  font-weight: 600;
+  margin-bottom: 8px;
+
+}
+
+.SelectedProductImage
+{
+  border: 2px solid teal;
+  border-radius: 8px;
+}
+
+.FeatureItem
+{
+  background-color: gainsboro;
+  border-radius: 8px;
+  border:0;
+  font-size: 24px;
+  padding: 12px 24px;
+  text-align: center;
+  margin-right: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  box-sizing: content-box;
+}
+
+.FeatureItem:hover
+{
+  opacity: 0.8;
+}
+
+
+.SelectedFeatureItem
+{
+  color: white;
+  background-color: gray;
+}
+
+.PrimaryButton
+{
+  color: white;
+  background-color: teal;
+  font-size: 26px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin-top: 36px;
+}
+.PrimaryButton:hover
+{
+  opacity: 0.8;
+}
+
+button > i
+ {
+     margin-right: 10px;
+ }
