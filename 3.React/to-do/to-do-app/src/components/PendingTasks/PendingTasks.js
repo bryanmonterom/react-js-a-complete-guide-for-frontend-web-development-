@@ -4,27 +4,14 @@ import classes from './PendingTasks.module.css'
 const PendingTasks = () =>
 {
     return    (
-    <div className = {classes.PendingTasksWrapper}>
-        <div class="input-group">
-            < input type="checkbox" className={classes.CheckBoxItem} aria-label="Checkbox for following text input"/>
-            <span className={classes.TaskPendingItem}>Action 1</span>
-      </div>
-      <div class="input-group">
-            < input type="checkbox" className={classes.CheckBoxItem} aria-label="Checkbox for following text input"/>
-            <span className={classes.TaskPendingItem}>Action 1</span>
-      </div>
-      <div class="input-group">
-            < input type="checkbox" className={classes.CheckBoxItem} aria-label="Checkbox for following text input"/>
-            <span className={classes.TaskPendingItem}>Action 1</span>
-      </div>
-      <div class="input-group">
-            < input type="checkbox" className={classes.CheckBoxItem} aria-label="Checkbox for following text input"/>
-            <span className={classes.TaskPendingItem}>Action 1</span>
-      </div>
-      <div class="icon">
-        <i class="fas fa-heartbeat"></i>
-      </div>
-    </div>
+        <div className="row">
+            <div className={classes.PendingItem}>
+                <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                    <label class="form-check-label" for="exampleCheck1">Pending action to do.</label>
+                </div>
+            </div>
+        </div>
     )
 }
 

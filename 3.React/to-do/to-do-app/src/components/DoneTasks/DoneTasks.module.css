@@ -1,10 +1,15 @@
-.DoneTasksWrapper
+.DoneItem
 {
-    widows: 100%;
-    background-color: #0c6d3d;
-    border: 2px solid #074124;
     color: white;
-    font-size: 12px;
+    padding: 5px;
+    font-size: 18px;
     font-weight: 600;
-
+    margin-left: 25px;
+    text-align: center;
 }
+
+.DoneItem:hover
+{
+    color:#074124;
+}
+

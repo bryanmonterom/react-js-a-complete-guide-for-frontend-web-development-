@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+.withMargin
+{
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right:auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.PendingTasksWrapper
+{
+    background-color: #eba707;
+    border: 2px solid #c48b06;
+    color: white;
+    position: relative;
+    width: 80%;
+    height: 600px;
+    border-radius: 6px;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.DoneTasksWrapper
+{
+    background-color: #0c6d3d;
+    border: 2px solid #074124;
+    color: white;
+    height: 600px;
+    position: relative;
+    width: 80%;
+    height: 600px;
+    border-radius: 6px;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+div > img
+{
+    width: 200px; /* to keep proportions */
+    height: 200px; /* to keep proportions */
+    position: absolute;
+    
+    bottom: 0;
+    right: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

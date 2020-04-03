@@ -1,36 +1,17 @@
-.PendingTasksWrapper
-{
-    widows: 100%;
-    background-color: #eba707;
-    border: 2px solid #c48b06;
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-
-}
-
-.CheckBoxItem
-{
-    padding: 10px;
-    margin-right: 16px;
-    margin-left: 16px;
-    font-size: 14px;
-
-
-}
-
-.TaskPendingItem
+.PendingItem
 {
     color: white;
-    padding: 10px;
+    padding: 5px;
     font-size: 18px;
     font-weight: 600;
+    margin-left: 25px;
+    text-align: center;
 }
 
-div > i
- {
-    color: #ffffff;
-    padding: 10px;
-    font-size: 60px;
-    font-weight: 600; 
- }
+.PendingItem:hover
+{
+    color:#c48b06;
+}
+
+
+

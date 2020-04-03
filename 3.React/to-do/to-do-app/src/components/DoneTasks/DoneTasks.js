@@ -4,12 +4,14 @@ import classes from './DoneTasks.module.css'
 const DoneTasks = () =>
 {
     return    (
-    <div className = {classes.DoneTasksWrapper}>
-        <div class="input-group">
-        <   input type="checkbox" aria-label="Checkbox for following text input"/>
-            <span>Action 1</span>
-      </div>
-    </div>
+        <div className="row">
+            <div className={classes.DoneItem}>
+                <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                    <label class="form-check-label" for="exampleCheck1">Pending action to do.</label>
+                </div>
+            </div>
+        </div>
     )
 }
 
