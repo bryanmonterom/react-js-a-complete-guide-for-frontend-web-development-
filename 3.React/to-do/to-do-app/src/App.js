@@ -5,18 +5,61 @@ import PendingTasks from './components/PendingTasks/PendingTasks'
 import TaskPendingImg from './homework.png'
 import TaskDoneImg from './checkmark.png'
 import ToDoData from './components/todoData'
-import TaskOrganizer from './components/TaskOrganizer/TaskOrganizer';
 
 
 
+class App extends React.Component 
+{
+  constructor()
+  {
+    super()
 
-function App() {
-  return (
-    <div className="container withMargin">
+    this.state =
+    {
+      todos : ToDoData
+    }
+
+     this.statusHandler = this.statusHandler.bind(this)
+  }
+
+  componentDidMount()
+  {
+    console.log('Ya se monto')
+  }
+
+  statusHandler = (id) =>{
+    console.log(this.state);
+    const updatedTodos = this.state.todos.map(todo => {
+      if (todo.id === id) {
+        return{
+          ...todo,
+          completed:!todo.completed
+        }
+      }
+      return todo
+  });
+
+    this.setState({  
+      todos: updatedTodos
+  });
+}
+
+
+
+render(){
+  // let trueDrawer = this.state.completed.map(item =>  <DoneTasks key={item.id} task={item}/>)
+  let trueDrawer =
+   this.state.todos.filter(item => item.completed).map(item =><DoneTasks key={item.id} task={item} statusHandler = {this.statusHandler}/>)
+  let pendingDrawer = this.state.todos.filter(item => !item.completed).map(item =>  <PendingTasks key={item.id} task={item} statusHandler = {this.statusHandler}/>)
+
+
+           
+
+  return (    <div className="container withMargin">
       <div className="row">
         <div className="col-6">
           <div className ="PendingTasksWrapper">
-            < PendingTasks/>
+            {pendingDrawer}
             <div class="row">
               <img src={TaskPendingImg} alt="task-pending"></img>
             </div>
@@ -24,9 +67,8 @@ function App() {
         </div>
         <div className="col-6">
           <div className ="DoneTasksWrapper">
-            < DoneTasks/>
-            <TaskOrganizer/>
-              <div class="row">
+          {trueDrawer}
+                     <div class="row">
               <img src={TaskDoneImg} alt="task-pending"></img>
             </div>
           </div>
@@ -34,6 +76,7 @@ function App() {
       </div>
     </div>
   );
+}
 }
 
 export default App;

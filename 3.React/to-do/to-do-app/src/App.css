@@ -9,30 +9,38 @@
 .PendingTasksWrapper
 {
     background-color: #eba707;
-    border: 2px solid #c48b06;
+    border: 4px solid #c48b06;
     color: white;
     position: relative;
     width: 80%;
     height: 600px;
     border-radius: 6px;
-
+    text-align: center;
 
 }
 
 .DoneTasksWrapper
 {
     background-color: #0c6d3d;
-    border: 2px solid #074124;
+    border: 4px solid #074124;
     color: white;
     height: 600px;
     position: relative;
     width: 80%;
     height: 600px;
     border-radius: 6px;
-
+    text-align: center;
 
 }
+.DoneTasksWrapper:hover
+{
+    box-shadow: 2px 2px 4px #000000;
+}
 
+.PendingTasksWrapper:hover
+{
+    box-shadow: 2px 2px 4px #000000;
+}
 
 
 div > img
