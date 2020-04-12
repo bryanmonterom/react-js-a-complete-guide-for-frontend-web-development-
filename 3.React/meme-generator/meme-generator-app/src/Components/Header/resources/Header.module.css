@@ -1,0 +1,33 @@
+.Header
+{
+    background-color: #001f3e;
+    width: 100%;
+    top:0;
+    position: static;
+    margin-bottom: 20px;
+}
+
+.LogoText
+{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.LogoWrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 50%;
+
+}
+
+.LogoImage
+{
+    width: 100px;
+    height:  100px;
+    display: inline-block;
+}

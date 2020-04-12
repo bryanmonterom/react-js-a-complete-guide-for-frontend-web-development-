@@ -5,7 +5,9 @@ const DoneTasks = (props) =>
 {
     return    (
         <div className="row">
+
             <div className={classes.DoneItem}>
+
                 <div className="form-group form-check" >
                 <input type="checkbox" 
                 class="form-check-input" 
@@ -16,6 +18,8 @@ const DoneTasks = (props) =>
                  <label class="form-check-label" >{props.task.description}</label>
                 </div>
             </div>
+            <button className="btn  btn-sm btn-danger" onClick= {props.remove.bind(this, props.task.id)} >Remove</button>
+
         </div>
     )
 }

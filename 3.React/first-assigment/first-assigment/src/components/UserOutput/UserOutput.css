@@ -1,0 +1,18 @@
+.Card
+{
+    background-color: lightgray;
+    color: white;
+    font-weight: 600;
+    font-style: normal;
+    width: 350px;
+    height: 150px;
+    box-shadow: 2px 5px #cccccc;
+    margin:16px
+
+
+}
+
+.Card-Content
+{
+    padding: 16px;
+}

@@ -22,6 +22,20 @@ class App extends React.Component
      this.statusHandler = this.statusHandler.bind(this)
   }
 
+  addItem()  {
+    const text = prompt("Insert to do name")
+    let lastId = this.state.todos[this.state.todos.length-1].id+1;
+    var newArray = [...this.state.todos, {id: lastId, description:text, completed: false}]
+    this.setState({todos: newArray})
+
+  }
+
+  removeItem= (id) =>
+  {
+    console.log(id)
+    this.setState({todos: this.state.todos.filter(x => x.id !== id)})
+  }
+  
   componentDidMount()
   {
     console.log('Ya se monto')
@@ -49,14 +63,17 @@ class App extends React.Component
 render(){
   // let trueDrawer = this.state.completed.map(item =>  <DoneTasks key={item.id} task={item}/>)
   let trueDrawer =
-   this.state.todos.filter(item => item.completed).map(item =><DoneTasks key={item.id} task={item} statusHandler = {this.statusHandler}/>)
-  let pendingDrawer = this.state.todos.filter(item => !item.completed).map(item =>  <PendingTasks key={item.id} task={item} statusHandler = {this.statusHandler}/>)
+   this.state.todos.filter(item => item.completed).map(item =><DoneTasks key={item.id} task={item} remove = {this.removeItem} statusHandler = {this.statusHandler}/>)
+  let pendingDrawer = this.state.todos.filter(item => !item.completed).map(item =>  <PendingTasks key={item.id} task={item} remove = {this.removeItem} statusHandler = {this.statusHandler}/>)
 
 
            
 
   return (    <div className="container withMargin">
+  <button onClick={()=>this.addItem()}>Add new</button>
+
       <div className="row">
+
         <div className="col-6">
           <div className ="PendingTasksWrapper">
             {pendingDrawer}

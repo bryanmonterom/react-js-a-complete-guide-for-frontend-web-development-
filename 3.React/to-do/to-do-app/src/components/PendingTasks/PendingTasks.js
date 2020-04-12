@@ -10,7 +10,10 @@ const PendingTasks = (props) =>
                 <input type="checkbox" class="form-check-input" id={props.task.id} onChange={() =>props.statusHandler(props.task.id)} checked={props.task.completed}/>
                 <label class="form-check-label" >{props.task.description}</label>
                 </div>
+
             </div>
+            <button className="btn btn-danger btn-sm" onClick= {props.remove.bind(this, props.task.id)} >X</button>
+
         </div>
     )
 }
