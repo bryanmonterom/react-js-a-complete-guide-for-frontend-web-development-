@@ -17,7 +17,14 @@ class App extends Component {
     this.setState({text: event.target.value})
   }
 
+  deleteChar=(key)=>
+  { 
+    const text= this.state.text.split('');
+    text.splice(key,1)
+    const updatedText = text.join('')
+    this.setState({text:updatedText})
 
+  }
   render(){
 
   let charList = this.state.text.split('').map((char,key)=>
@@ -25,6 +32,7 @@ class App extends Component {
     return(<CharComponent
       key= {key}
       char={char}
+      click={()=> this.deleteChar(key)}
     />
     )
   })

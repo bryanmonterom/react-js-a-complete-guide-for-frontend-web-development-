@@ -12,9 +12,5 @@ const ValidationComponent = (props)=>
 }
 
 
-const style=
-{
-    boxShadow:"2px 5px #eee",
-    border:"1px solid #ccc"
-}
+
 export default ValidationComponent
