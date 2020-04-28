@@ -1,0 +1,35 @@
+
+  
+  .red
+  {
+    color:lightcoral;
+  }
+  
+  .bold
+  {
+    font-weight: bold;
+  }
+  
+  .button
+  {
+    background-color: green;
+    font: inherit;
+    border: 1px solid #ccc;
+    padding: 8px;
+    cursor: pointer;
+    margin:12px;
+    border-radius:5px;
+    color:white;
+  }
+  .button:hover{
+      background-color: lightgreen;
+  };
+  
+  .button.redbtn{
+    background-color: red;
+  }
+  
+  .button.redbtn:hover{
+  background-color: salmon;
+  }
+  
