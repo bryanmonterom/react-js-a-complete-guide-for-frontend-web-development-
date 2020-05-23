@@ -1,40 +1,22 @@
 import React, { Component } from 'react';
-
-import Post from '../../components/Post/Post';
-import FullPost from '../../components/FullPost/FullPost';
-import NewPost from '../../components/NewPost/NewPost';
+import{Route, NavLink, Switch}from 'react-router-dom'
+import Posts from '../../components/Post/Post'
 import './Blog.css';
 import Axios from '../../axios';
+import NewPost from '../../containers/Blog/NewPost/NewPost'
+import FullPost from '../../containers/Blog/FullPost/FullPost'
 
 class Blog extends Component {
     state = {
         posts:null,
-        selectedPostId: null
+        selectedPostId: null,
+        error:false
     }
 
-    componentDidMount(){
-        let posts = "";
-        Axios.get('/posts')
-        .then(response =>{
-           posts = response.data.slice(0,4);
-            const updatedPosts = posts.map(posts => {
-                return{
-                    ...posts,
-                    author:'Bryan'
-                }
-            })
-            this.setState({posts: updatedPosts})
+    
 
-        }).catch(error=>{
-           console.log(error)
-        });
 
-    }   
 
-    postSelectedHandler = (id)=>{
-        this.setState({selectedPostId: id})
-        console.log('clicked')
-    }
 
     deletePostHandler=(id)=>{
         Axios.delete('/posts/'+id)
@@ -43,27 +25,24 @@ class Blog extends Component {
         })
     }
     render () {
-        let posts = <p>Something went wrong</p>
-        if (this.state.posts){
-            console.log('aqui')
-         posts = this.state.posts.map((post, key)=>{
-            return (
-                <Post 
-                    author={post.author} 
-                    key={post.id} 
-                    title={post.title}
-                    clicked={()=>this.postSelectedHandler(post.id)}
-                    />
-        )});
-    }
-
-           
         return (
-            <div>
-                <section className="Posts">
-                    {posts}
-                </section>
-                <section>
+            <div className="Posts">
+            <header>
+                <nav>
+                    <ul>
+                        <li><NavLink exact to="/">Home</NavLink></li>
+                        <li><NavLink to="/new-post">New Post</NavLink></li>
+                    </ul>
+                </nav>
+            </header>
+            {/* <Route path="/" exact render={()=><h1>Klks</h1>}/> */}
+            <Switch>
+               <Route path="/" exact component={Posts}/>
+               <Route path="/new-post" component={NewPost}/>
+               <Route path="/:id" component={FullPost}/>
+</Switch>
+
+                {/* <section>
                     <FullPost 
                         id={this.state.selectedPostId}
                         delete={this.deletePostHandler}
@@ -71,7 +50,7 @@ class Blog extends Component {
                 </section>
                 <section>
                     <NewPost />
-                </section>
+                </section> */}
             </div>
         );
     }

@@ -1,14 +1,61 @@
-import React from 'react';
+import React,{Component} from 'react'
+import Axios from '../../axios';
+import Post from '../../containers/Blog/Post/Post' 
+import {Link} from 'react-router-dom'
 
-import './Post.css';
+class Posts extends Component{
 
-const post = (props) => (
-    <article className="Post" onClick={props.clicked}>
-        <h1>{props.title}</h1>
-        <div className="Info">
-            <div className="Author">{props.author}</div>
-        </div>
-    </article>
-);
+    state = {
+        posts:[],
+        selectedPostId: null,
+        error:false
+    }
 
-export default post;
+    postSelectedHandler = (id)=>{
+        this.setState({selectedPostId: id})
+        console.log('clicked')
+    }
+    componentDidMount(){
+        let posts = "";
+        Axios.get('/posts')
+        .then(response =>{
+           posts = response.data.slice(0,4);
+            const updatedPosts = posts.map(posts => {
+                return{
+                    ...posts,
+                    author:'Bryan'
+                }
+            })
+            this.setState({posts: updatedPosts})
+
+        }).catch(error=>{
+           console.log(error)
+        });
+    }
+
+render(){
+    let posts = <p>Something went wrong</p>
+
+    if (this.state.posts){
+    console.log('aqui')
+    posts = this.state.posts.map((post, key)=>{
+    return (
+        <Link to={"/"+post.id} key={post.id}>
+            <Post 
+                author={post.author} 
+                title={post.title}
+                clicked={()=>this.postSelectedHandler(post.id)}
+            />
+        </Link>
+    )});
+    }
+    return(
+      
+        <section className="Posts">
+                    {posts}
+             </section>  
+    );
+}
+}
+
+export default Posts
